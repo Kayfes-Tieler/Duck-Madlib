@@ -1,0 +1,120 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+#header {
+  background: url("https://pngriver.com/wp-content/uploads/2017/12/Duck-free-png-images-transparent-backgrounds-Duck-7-1000x927.png");
+  background-size: 226px;
+  background-repeat: repeat;
+  border-bottom: 1px solid black;
+  color: #333;
+  background-color: #eee;
+  box-sizing: border-box;
+  margin: 0;
+  height: 210px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  text-shadow: 0px 0px 4px #000;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+}
+
+#header-text {
+  background: rgba(15, 15, 15, 0.7);
+  width: 100%;
+  height: 30%;
+  align-self: flex-end;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#header-text h1 {
+  max-width: 1200px;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 30px;
+}
+
+#generate-container {
+  padding: 10px 0;
+}
+
+#generate {
+  padding: 6px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: #333;
+  color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-family: cursive;
+}
+
+#duck-img {
+  width: 20%;
+  align-self: center;
+}
+
+input[type="text"] {
+  margin: 7px 5px 7px 0;
+  padding: 6px 10px;
+  height: 20px;
+  border: 1px solid black;
+  font-family: "Baloo Thambi 2", cursive;
+}
+
+#footer {
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  align-self: bottom;
+}
+
+#icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75px;
+  font-size: 25px;
+}
+
+#footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #eee;
+}
+
+#result {
+  font-size: 20px;
+  font-family: "Baloo Thambi 2", cursive;
+}
