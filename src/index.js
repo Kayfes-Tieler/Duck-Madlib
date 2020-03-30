@@ -19,10 +19,12 @@ document.getElementById("app").innerHTML = `
   </div>
   <div id="result"></div>
   <div id="footer">
-    <div>&copy; 2020 Tieler & Jon</div>
-    <div id="icons">
-      <a href="https://www.youtube.com/channel/UCSFChNH2FUajo0P1JdAFXQg" title="Tieler's Youtube" target="_blank"><div class="socicon-youtube"></div></a>
-      <a href="https://github.com/Kayfes-Tieler/duck-empire-madlib" title="Tieler's GitHub" target="_blank" class="socicon-github"></a>
+    <div id="footer-inner">
+      <div>&copy; 2020 Tieler & Jon</div>
+      <div id="icons">
+        <a href="https://www.youtube.com/channel/UCSFChNH2FUajo0P1JdAFXQg" title="Tieler's Youtube" target="_blank"><div class="socicon-youtube"></div></a>
+        <a href="https://github.com/Kayfes-Tieler/duck-madlib" title="Tieler's GitHub" target="_blank" class="socicon-github"></a>
+      </div>
     </div>
   </div>
 </div>
