@@ -73,14 +73,17 @@ function random(number) {
   return Math.floor(Math.random() * (number + 1));
 }
 
-//
+let timeHandle = null;
 btn.onclick = function() {
+  if (timeHandle) {
+    clearTimeout(timeHandle);
+  }
   // get the modal
   let modal = document.querySelector("#modal");
 
   const rndCol =
     "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
-  let num = random(20);
+  let num = random(15);
   if (num === 1) {
     // you win
     modal.innerText = "You Won";
@@ -94,7 +97,7 @@ btn.onclick = function() {
   // hide modal after 10 seconds
   const seconds = 10;
   const time = 1000 * seconds;
-  setTimeout(function() {
+  timeHandle = setTimeout(function() {
     // do this after __ seconds
     modal.style.display = "none";
   }, time);
