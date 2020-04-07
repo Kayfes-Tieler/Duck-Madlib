@@ -1,4 +1,5 @@
-import "./styles.css";
+import "./style-one.css";
+//import "./style-two.css";
 
 document.getElementById("app").innerHTML = `
 <div id="header">
@@ -15,12 +16,14 @@ document.getElementById("app").innerHTML = `
     <input id="verb1past" type="text" placeholder="Verb (past)">
   </div>
   <div id="generate-container">
-    <input id="generate" type="button" value="Generate">
+  <input id="generate" class="btn" type="button" value="Generate">
+  <input id="duck-btn" class="btn" type="button" value="Test Your Luck 1 in 20 wins">
+            
   </div>
   <div id="result"></div>
   <div id="footer">
     <div id="footer-inner">
-      <div>&copy; 2020 Tieler & Jon</div>
+      <div>&copy; 2020 Tieler & Jon Inc</div>
       <div id="icons">
         <a href="https://www.youtube.com/channel/UCSFChNH2FUajo0P1JdAFXQg" title="Tieler's Youtube" target="_blank"><div class="socicon-youtube"></div></a>
         <a href="https://github.com/Kayfes-Tieler/duck-madlib" title="Tieler's GitHub" target="_blank" class="socicon-github"></a>
@@ -59,3 +62,27 @@ function generateMadLib() {
 
 let generateButton = document.querySelector("#generate");
 generateButton.addEventListener("click", generateMadLib);
+
+// this gets the duck button
+const btn = document.querySelector("#duck-btn");
+
+// this function returns a
+// random color
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+//
+btn.onclick = function() {
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+  let num = random(20);
+  if (num === 1) {
+    // this stuff
+    alert("you win 1000000 dollars (not really)");
+  } else {
+    // this stuff
+    alert("you lose");
+  }
+  document.body.style.backgroundColor = rndCol;
+};

@@ -54,7 +54,7 @@ html {
   padding: 10px 0;
 }
 
-#generate {
+.btn {
   padding: 6px 10px;
   font-size: 15px;
   font-weight: bold;
