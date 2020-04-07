@@ -95,7 +95,7 @@ btn.onclick = function() {
   modal.style.display = "block";
 
   // hide modal after 10 seconds
-  const seconds = 10;
+  const seconds = 5;
   const time = 1000 * seconds;
   timeHandle = setTimeout(function() {
     // do this after __ seconds
