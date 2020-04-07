@@ -17,10 +17,11 @@ document.getElementById("app").innerHTML = `
   </div>
   <div id="generate-container">
   <input id="generate" class="btn" type="button" value="Generate">
-  <input id="duck-btn" class="btn" type="button" value="Test Your Luck 1 in 20 wins">
+  <input id="duck-btn" class="btn" type="button" value="Test Your Luck">
             
   </div>
   <div id="result"></div>
+  <div id="modal">You Win</div>
   <div id="footer">
     <div id="footer-inner">
       <div>&copy; 2020 Tieler & Jon Inc</div>
@@ -74,15 +75,29 @@ function random(number) {
 
 //
 btn.onclick = function() {
+  // get the modal
+  let modal = document.querySelector("#modal");
+
   const rndCol =
     "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   let num = random(20);
   if (num === 1) {
-    // this stuff
-    alert("you win 1000000 dollars (not really)");
+    // you win
+    modal.innerText = "You Won";
   } else {
-    // this stuff
-    alert("you lose");
+    // you lose
+    modal.innerText = "You Lost";
   }
+  // show modal
+  modal.style.display = "block";
+
+  // hide modal after 10 seconds
+  const seconds = 10;
+  const time = 1000 * seconds;
+  setTimeout(function() {
+    // do this after __ seconds
+    modal.style.display = "none";
+  }, time);
+
   document.body.style.backgroundColor = rndCol;
 };
