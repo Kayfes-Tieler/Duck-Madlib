@@ -18,6 +18,7 @@ document.getElementById("app").innerHTML = `
   <div id="generate-container">
   <input id="generate" class="btn" type="button" value="Generate">
   <input id="duck-btn" class="btn" type="button" value="Test Your Luck">
+  <input id="fun" class="btn" type="button" value="ask a question">
             
   </div>
   <div id="result"></div>
@@ -104,3 +105,28 @@ btn.onclick = function() {
 
   document.body.style.backgroundColor = rndCol;
 };
+
+/*
+  alert - pop up with the string you pass it
+  confirm - asks the user to confirm and return true or false
+  prompt - asks the user for input, and return the input
+*/
+
+document.querySelector("#fun").addEventListener("click", function() {
+  function hello(name) {
+    // block scope
+    alert("Hello " + name);
+  }
+
+  function addTwo(num) {
+    return num + 2;
+  }
+
+  let userAnswer = confirm("do you want to keep playing");
+
+  if (userAnswer) {
+    alert("Okay");
+  } else {
+    alert("fine!");
+  }
+});
